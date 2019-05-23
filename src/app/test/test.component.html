@@ -1,0 +1,49 @@
+<img src ="{{imgsrc}}">
+<img [src]="imgsrc">
+<table>
+  <tr>
+    <td>Month</td>
+    <td>savings</td>
+  </tr>
+  <tr>
+    <td>jaunary</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$80</td>
+  </tr>
+  <tr>
+    <td [attr.colspan]="col">Sum $180</td>
+  </tr>
+</table>
+<h1 [class.green]="isactive">Hello</h1>
+<h1 [style.color]="isactive ?'green':'red'">Hello </h1>
+<h1 [style.backgroundColor]="isactive ?'green':'red'">Hello </h1>
+<h1 (click)="login()">Login</h1>
+
+<input type="text" (keydown) ="login($event)">
+<input type="text" (keydown.g) ="login($event)">
+
+
+<input type="text"[(ngModel)]="val"(keyup.enter)="onclic()">
+
+<div style="text-align:center">
+   
+  <input type="number"[(ngModel)]="a"(keyup.enter)="onclic()">
+  <input type="number"[(ngModel)]="b"(keyup.enter)="onclic()">
+  
+  <br>
+  <button  (click) = "addition($event)">Calculate</button>
+  <br>
+</div>
+<br> <br>
+<form>
+  First name: <input type="text"name="nom"[(ngModel)]= "nom"(keyup.enter)="onclic()" ><br>
+  Last name: <input type="text"name="prenon" [(ngModel)]= "prenon"(keyup.enter)="onclic()" ><br>
+  Email: <input type="text"name="email"  [(ngModel)]= "email"(keyup.enter)="onclic()" ><br>
+ <br>
+  <button (click) ="ajouter($event)">Submit</button>
+  </form>
+<br>
+  
